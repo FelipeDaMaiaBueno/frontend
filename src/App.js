@@ -1,28 +1,24 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css';     //aceita a importação de arquivos .css
+import Routes from './routes';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+//se o componente nao tem state pode escrever ele em forma de função
+//Exemplo:
+//Isso
+/*class App extends Component {    //pode-se criar component, e pode chama-lo como uma tag html <App />
+  render() {    //obrigatorio dentro do component, retorna o conteudo html 
+    return <Main />;
   }
+}*/
+
+//Se torna isso
+/*
+function App () {
+  return <Main />
 }
+*/
+
+//Ainda pode reduzir ainda mais, tranformando ela em ArrowFunction (mas apenas se ela tiver apenas um return)
+const App = () => <Routes />;
 
 export default App;
